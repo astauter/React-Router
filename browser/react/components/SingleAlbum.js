@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Songs from '../components/Songs';
 
-export default class SingleAlbum extends Component {
+
+class SingleAlbum extends Component {
+  constructor(){
+    super();
+    this.state = {
+      selectedAlbum: {}
+    }
+  }
+
+  componentDidMount () {
+    axios.get(`/api/albums/${this.props.match.params.albumId}`)
+    .then(res => res.data)
+    .then(selectedAlbum => {
+      this.setState({selectedAlbum})
+    })
+  }
 
   render () {
-
-    const album = this.props.album;
+    console.log(this.state)
+    const album = this.state.selectedAlbum;
 
     return (
       <div className="album">
@@ -18,3 +34,5 @@ export default class SingleAlbum extends Component {
     );
   }
 }
+
+export default SingleAlbum;
