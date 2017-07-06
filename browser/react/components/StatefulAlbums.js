@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AllAlbums from './AllAlbums'
+import axios from 'axios';
 
 class StatefulAlbums extends Component {
     constructor() {

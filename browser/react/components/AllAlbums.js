@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import StatefulAlbums from './StatefulAlbums'
+// import axios from 'axios';
+// import StatefulAlbums from './StatefulAlbums'
 
 const AllAlbums = (props) => {
-// console.log('props', props)
+console.log('props', props)
 
   const albums = props.albums;
 

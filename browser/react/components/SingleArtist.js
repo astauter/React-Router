@@ -40,7 +40,7 @@ class SingleArtist extends Component {
             <div>
             <h3>{artist.name}</h3>
             <h4>ALBUMS</h4>
-                <AllAlbums />
+                <AllAlbums albums={albums} />
             <h4>SONGS</h4>
                 <Songs songs={songs}/>
             </div>
